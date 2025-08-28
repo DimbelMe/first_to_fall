@@ -13,6 +13,10 @@ function showSlide(i) {
 prevBtn.addEventListener("click", () => showSlide(index - 1));
 nextBtn.addEventListener("click", () => showSlide(index + 1));
 
+window.addEventListener("load", function () {
+  window.location.hash = "#home";
+  window.scrollTo(0, 0);
+});
 
 const bgimages = [
   "assets/build cap.webp",
@@ -21,7 +25,7 @@ const bgimages = [
   "assets/hazmat cap.webp",
   "assets/science cap.webp",
   "assets/shoot cap.webp",
-  "assets/zombie cap.webp"
+  "assets/zombie cap.webp",
 ];
 
 let i = 0;
