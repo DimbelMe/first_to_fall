@@ -12,3 +12,21 @@ function showSlide(i) {
 
 prevBtn.addEventListener("click", () => showSlide(index - 1));
 nextBtn.addEventListener("click", () => showSlide(index + 1));
+
+
+const bgimages = [
+  "assets/build cap.webp",
+  "assets/checkpoint cap.webp",
+  "assets/crime cap.webp",
+  "assets/hazmat cap.webp",
+  "assets/science cap.webp",
+  "assets/shoot cap.webp",
+  "assets/zombie cap.webp"
+];
+
+let i = 0;
+
+setInterval(() => {
+  document.body.style.backgroundImage = `url("${bgimages[i]}")`;
+  i = (i + 1) % bgimages.length;
+}, 2000);
